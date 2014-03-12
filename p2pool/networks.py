@@ -83,7 +83,25 @@ nets = dict(
         ANNOUNCE_CHANNEL='#p2pool-alt',
         VERSION_CHECK=lambda v: True,
     ),
-
+    spaincoin=math.Object(
+        PARENT=networks.nets['spaincoin'],
+        SHARE_PERIOD=15, # seconds
+        CHAIN_LENGTH=24*60*60//10, # shares
+        REAL_CHAIN_LENGTH=24*60*60//10, # shares
+        TARGET_LOOKBEHIND=200, # shares
+        SPREAD=10, # blocks
+        IDENTIFIER='e238d5b8c6921492'.decode('hex'),
+        PREFIX='7409c1a53ef61492'.decode('hex'),
+        P2P_PORT=25491,
+        MIN_TARGET=0,
+        MAX_TARGET=2**256//2**20 - 1,
+        PERSIST=True,
+        WORKER_PORT=25490,
+        BOOTSTRAP_ADDRS='p2pool.crunchpool.com crunchpool.mooo.com'.split(' '),
+        ANNOUNCE_CHANNEL='#p2pool-spa',
+        VERSION_CHECK=lambda v: True,
+        VERSION_WARNING=lambda v: 'Upgrade Spaincoin to >=0.8.6.2!' if v < 80602 else None,
+    ),
     terracoin=math.Object(
         PARENT=networks.nets['terracoin'],
         SHARE_PERIOD=30, # seconds
