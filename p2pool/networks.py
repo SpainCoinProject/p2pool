@@ -97,7 +97,7 @@ nets = dict(
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=True,
         WORKER_PORT=25490,
-        BOOTSTRAP_ADDRS='p2pool.crunchpool.com crunchpool.mooo.com'.split(' '),
+        BOOTSTRAP_ADDRS='p2pool2.crunchpool.com p2pool.crunchpool.com spa.boulderbtc.com p2pooleu.cloudapp.net 31.31.72.59'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-spa',
         VERSION_CHECK=lambda v: True,
         VERSION_WARNING=lambda v: 'Upgrade Spaincoin to >=0.8.6.2!' if v < 80602 else None,
