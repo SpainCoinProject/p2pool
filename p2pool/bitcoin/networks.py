@@ -172,7 +172,7 @@ nets = dict(
             not (yield bitcoind.rpc_getinfo())['testnet']
         )),
         SUBSIDY_FUNC=lambda height: spa_sub(height), 
-        POW_FUNC=lambda data: pack.IntType(256).unpack(__import__('ltc_scrypt').getPoWHash(data)),
+        POW_FUNC=lambda data: pack.IntType(256).unpack(__import__('vtc_scrypt').getPoWHash(data)),
         BLOCK_PERIOD=120, # s
         SYMBOL='SPA',
         CONF_FILE_FUNC=lambda: os.path.join(os.path.join(os.environ['APPDATA'], 'Spaincoin') if platform.system() == 'Windows' else os.path.expanduser('~/Library/Application Support/Spaincoin/') if platform.system() == 'Darwin' else os.path.expanduser('~/.spaincoin'), 'spaincoin.conf'),

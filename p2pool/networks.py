@@ -89,18 +89,18 @@ nets = dict(
         CHAIN_LENGTH=24*60*60//10, # shares
         REAL_CHAIN_LENGTH=24*60*60//10, # shares
         TARGET_LOOKBEHIND=200, # shares
-        SPREAD=10, # blocks
-        IDENTIFIER='e238d5b8c6921492'.decode('hex'),
-        PREFIX='7409c1a53ef61492'.decode('hex'),
-        P2P_PORT=25491,
+        SPREAD=12, # blocks
+        IDENTIFIER='e238d5b8c6931492'.decode('hex'),
+        PREFIX='7409c1a53ef71492'.decode('hex'),
+        P2P_PORT=26491,
         MIN_TARGET=0,
         MAX_TARGET=2**256//2**20 - 1,
         PERSIST=True,
-        WORKER_PORT=25490,
+        WORKER_PORT=26490,
         BOOTSTRAP_ADDRS='p2pool2.crunchpool.com p2pool.crunchpool.com spa.boulderbtc.com p2pooleu.cloudapp.net 31.31.72.59'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-spa',
         VERSION_CHECK=lambda v: True,
-        VERSION_WARNING=lambda v: 'Upgrade Spaincoin to >=0.8.6.2!' if v < 80602 else None,
+        VERSION_WARNING=lambda v: 'Upgrade Spaincoin to >=0.8.8.0!' if v < 80800 else None,
     ),
     terracoin=math.Object(
         PARENT=networks.nets['terracoin'],
