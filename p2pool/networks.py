@@ -100,7 +100,7 @@ nets = dict(
         BOOTSTRAP_ADDRS='p2pool2.crunchpool.com p2pool.crunchpool.com spa.boulderbtc.com p2pooleu.cloudapp.net 31.31.72.59'.split(' '),
         ANNOUNCE_CHANNEL='#p2pool-spa',
         VERSION_CHECK=lambda v: True,
-        VERSION_WARNING=lambda v: 'Upgrade Spaincoin to >=0.8.8.0!' if v < 80800 else None,
+        VERSION_WARNING=lambda v: 'Upgrade Spaincoin to >=0.9.0.0!' if v < 90000 else None,
     ),
     terracoin=math.Object(
         PARENT=networks.nets['terracoin'],
